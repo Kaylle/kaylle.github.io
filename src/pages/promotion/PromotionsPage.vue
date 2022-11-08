@@ -38,12 +38,17 @@
         </q-tabs>
       </div>
     </q-card>
+    <div class='row q-mx-lg q-mb-lg justify-around'>
+      <ComparationComponent/>
+      <ComparationComponent/>
+    </div>
     <router-view/>
   </q-page>
 </template>
 
 <script setup lang="ts">
 import DrawerComponent from 'components/DrawerComponent.vue';
+import ComparationComponent from "components/ComparationComponent.vue";
 
 const tabs = [
   {
