@@ -1,0 +1,60 @@
+@import "src/css/quasar.variables";
+.q-field__control {
+  border-radius: 16px !important;
+  backdrop-filter: blur(10px);
+  background: #ffffffaa;
+}
+.q-field--outlined .q-field__control:before {
+  border: 2px solid rgba(255,255,255,0.1);
+}
+.q-field--outlined .q-field__control:hover:before {
+  border-color: rgba(255,255,255,0.5);
+}
+.q-field--outlined.q-field--highlighted .q-field__control:after {
+  border-color: rgba(255,255,255,0.5);
+}
+.q-field__bottom {
+  padding: 4px 12px 4px;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.q-btn--rectangle {
+  border-radius: 16px !important;
+}
+.q-notification {
+  border-radius: 12px;
+  box-shadow: none;
+  & .q-notification__badge {
+    background: $white !important;
+    box-shadow: none !important;
+    color: $negative !important;
+    font-weight: 700 !important;
+  }
+}
+.q-drawer {
+  background: transparent !important;
+}
+
+.q-card {
+  background-color: rgba(225, 228, 232, 0.55) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(10px) !important;
+  outline: 2px solid rgba(211, 213, 218, 0.15) !important;
+  box-shadow: none !important;
+  & .q-card__section--vert {
+    padding: 30px 24px !important;
+  }
+}
+
+.q-menu {
+  border-radius: 16px;
+  padding: 16px 10px 6px 10px;
+}
+.q-tab-panels {
+  background: transparent;
+  & .q-tab-panel {
+    padding: 0;
+  }
+}
