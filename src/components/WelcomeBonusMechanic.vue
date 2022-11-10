@@ -22,16 +22,17 @@
             <div class='col-12'>
               <q-card>
                 <div class='q-pa-md flex items-center'>
-                  <q-avatar class='q-mr-md bg-white'>
-                    <q-icon name="icon-wallet"/>
-                  </q-avatar>
+<!--                  <q-avatar class='q-mr-md bg-white'>-->
+<!--                    <q-icon name="icon-wallet"/>-->
+<!--                  </q-avatar>-->
                   <div>
-                    <b class='text-positive'>100 points</b><br>
-                    <span>Unlimited</span>
+                    <b class='text-positive'>100 points </b>
+                    <span>- Unlimited</span>
                   </div>
                 </div>
               </q-card>
             </div>
+            <div class='col-12'><ApplyButton /></div>
           </div>
         </template>
         <div class='q-pa-md'>
@@ -43,5 +44,5 @@
 </template>
 
 <script setup lang="ts">
-
+import ApplyButton from "components/ApplyButton.vue";
 </script>

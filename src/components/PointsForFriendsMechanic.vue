@@ -26,7 +26,7 @@
             <div class='col-12'>
               <div class="row items-center q-gutter-md">
                 <q-avatar class='bg-white'>
-                  <img src="../../public/images/246179_3.png">
+                  <q-img src="../../public/images/peach.png"/>
                 </q-avatar>
                 <q-input model-value="" outlined dense label="Product amount" style="width: 174px"/>
                 <q-input model-value="" outlined dense label="Period" style="width: 174px"/>
@@ -37,6 +37,7 @@
               label="Condition"
               outlined
             />
+            <div class='col-12'><ApplyButton/></div>
           </div>
         </template>
         <div class='q-pa-md'>
@@ -48,5 +49,5 @@
 </template>
 
 <script setup lang="ts">
-
+import ApplyButton from "components/ApplyButton.vue";
 </script>

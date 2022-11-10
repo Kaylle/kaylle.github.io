@@ -87,7 +87,7 @@ const tabs = [
 @import "src/css/quasar.variables";
 
 .q-layout {
-  background-image: url("../../public/images/milad-fakurian-PGdW_bHDbpI-unsplash.jpg");
+  background-image: url("../../public/images/bg-gradient.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: bottom;

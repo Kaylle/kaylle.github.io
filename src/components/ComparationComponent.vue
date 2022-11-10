@@ -1,6 +1,6 @@
 <template>
   <div class="column items-center">
-    <b class="q-mb-sm" style="font-size: 18px">Bonuses</b>
+    <b class="q-mb-sm" style="font-size: 18px">{{ title }}</b>
     <div class="row">
       <q-input model-value="" type="number" outlined dense label="100 Points"/>
       <b style="font-size: 20px; line-height: 42px; margin: 0 10px">=</b>
@@ -10,5 +10,7 @@
 </template>
 
 <script setup lang="ts">
-
+const props = defineProps({
+  title: { required: false, type: String },
+});
 </script>

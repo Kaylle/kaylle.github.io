@@ -39,8 +39,8 @@
       </div>
     </q-card>
     <div class='row q-mx-lg q-mb-lg justify-around'>
-      <ComparationComponent/>
-      <ComparationComponent/>
+      <ComparationComponent title="Getting bonuses"/>
+      <ComparationComponent title="Spending bonuses"/>
     </div>
     <router-view/>
   </q-page>
@@ -52,40 +52,35 @@ import ComparationComponent from "components/ComparationComponent.vue";
 
 const tabs = [
   {
-    title: 'Certificates settings',
-    icon: 'icon-category',
-    tab: 'mechanics'
-  },
-  {
     title: 'Promotions mechanics',
     icon: 'icon-discount',
     tab: '/promotions/bonuses'//fix
   },
   {
-    title: 'Add new promotion',
-    icon: 'icon-plus-square',
-    tab: 'add-promotion'
-  },
-  {
     title: 'Mailing settings',
     icon: 'icon-message',
     tab: 'mailing-settings'
+  },
+  {
+    title: 'Coupons settings',
+    icon: 'icon-category',
+    tab: 'mechanics'
   }
 ];
 
 const activeMechanics = [
   {
-    title: 'Active mechanic 1',
+    title: 'Spending points on gifts',
     caption: 'Description',
     icon: 'icon-setting'
   },
   {
-    title: 'Active mechanic 2',
+    title: 'Challenge',
     caption: 'Description',
     icon: 'icon-setting'
   },
   {
-    title: 'Active mechanic 3',
+    title: 'Points for poll',
     caption: 'Description',
     icon: 'icon-setting'
   }

@@ -25,19 +25,33 @@
       <q-expansion-item>
         <template v-slot:header>
           <div style='flex: 1 1 100%' class='row q-col-gutter-md'>
-            <div class='col-6' v-for='n in [1,2]' :key='n'>
+            <div class='col-6'>
               <q-card>
                 <div class='q-pa-md flex items-center'>
                   <q-avatar class='q-mr-md'>
-                    <img src='../../public/images/246179_3.png'>
+                    <img src='../../public/images/bananas.png'/>
                   </q-avatar>
                   <div>
-                    <span>Cucumber</span><br>
+                    <span>Bananas</span><br>
                     <b class='text-positive'>143 points</b>
                   </div>
                 </div>
               </q-card>
             </div>
+            <div class='col-6'>
+              <q-card>
+                <div class='q-pa-md flex items-center'>
+                  <q-avatar class='q-mr-md'>
+                    <img src='../../public/images/tomatoes.png'/>
+                  </q-avatar>
+                  <div>
+                    <span>Tomatoes</span><br>
+                    <b class='text-positive'>82 points</b>
+                  </div>
+                </div>
+              </q-card>
+            </div>
+            <div class='col-12'><ApplyButton is-applied /></div>
           </div>
         </template>
         <div class='q-pa-md'>
@@ -53,5 +67,5 @@
 </template>
 
 <script setup lang="ts">
-
+import ApplyButton from "components/ApplyButton.vue";
 </script>

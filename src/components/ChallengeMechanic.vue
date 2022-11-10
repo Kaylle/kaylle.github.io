@@ -22,13 +22,14 @@
             <div class='col-12'>
               <div class="flex items-center q-gutter-md">
                 <q-avatar class='bg-white'>
-                  <img src="../../public/images/246179_3.png">
+                  <q-img src="../../public/images/246179_3.png"/>
                 </q-avatar>
                 <q-input label="Amount" outlined dense style="width: 100px"/>
                 <q-input outlined label="Period" dense style="width: 100px"/>
                 <q-input outlined label="Points" dense style="width: 100px"/>
               </div>
             </div>
+            <div class='col-12'><ApplyButton is-applied /></div>
           </div>
         </template>
         <div class='q-pa-md'>
@@ -41,5 +42,5 @@
 </template>
 
 <script setup lang="ts">
-
+import ApplyButton from "components/ApplyButton.vue";
 </script>

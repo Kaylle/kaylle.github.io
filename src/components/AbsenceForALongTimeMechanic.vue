@@ -36,19 +36,20 @@
               <q-card>
                 <div class='q-pa-md flex items-center'>
                     <q-avatar class='q-mr-md bg-white'>
-                      <img src="../../public/images/246179_3.png">
+                      <q-img src="../../public/images/peach.png"/>
                     </q-avatar>
                     <b style="font-size: 20px">+</b>
                     <q-avatar class='q-mx-md bg-white'>
-                      <img src="../../public/images/246179_3.png">
+                      <q-img src="../../public/images/watermellon.png"/>
                     </q-avatar>
                     <b style="font-size: 20px">=</b>
                     <q-avatar class='q-ml-md bg-white'>
-                      <img src="../../public/images/246179_3.png">
+                      <q-img src="../../public/images/246179_3.png"/>
                     </q-avatar>
                   </div>
               </q-card>
             </div>
+            <div class='col-12'><ApplyButton /></div>
           </div>
         </template>
         <div class='q-pa-md'>
@@ -60,5 +61,5 @@
 </template>
 
 <script setup lang="ts">
-
+import ApplyButton from "components/ApplyButton.vue";
 </script>

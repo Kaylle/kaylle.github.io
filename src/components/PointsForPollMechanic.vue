@@ -32,6 +32,7 @@
                 </div>
               </q-card>
             </div>
+            <div class='col-12'><ApplyButton is-applied/></div>
           </div>
         </template>
         <div class='q-pa-md'>
@@ -43,5 +44,5 @@
 </template>
 
 <script setup lang="ts">
-
+import ApplyButton from "components/ApplyButton.vue";
 </script>
