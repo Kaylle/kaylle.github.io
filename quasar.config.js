@@ -1,110 +1,117 @@
 /* eslint-env node */
-/* eslint-disable @typescript-eslint/no-var-requires */
 
 const { configure } = require('quasar/wrappers');
 
-module.exports = configure(function (ctx) {
+module.exports = configure(function (/* ctx */) {
   return {
-    supportTS: {
-      tsCheckerConfig: {
-        eslint: {
-          enabled: true,
-          files: './src/**/*.{ts,tsx,js,jsx,vue}',
-        },
-      }
+    eslint: {
+      warnings: true,
+      errors: true
     },
-    boot: [
-      'axios',
-      'notify'
-    ],
+    boot: [],
     css: [
       'app.scss'
     ],
-    extras: [
-      'material-icons',
-    ],
+    extras: [],
     build: {
+      target: {
+        browser: [ 'es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1' ],
+        node: 'node16'
+      },
       vueRouterMode: 'history',
+      // vueRouterBase,
+      // vueDevtools,
+      // vueOptionsAPI: false,
+      // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
+      // publicPath: '/',
+      // analyze: true,
+      // env: {},
+      // rawDefine: {}
+      // ignorePublicFolder: true,
+      // minify: false,
+      // polyfillModulePreload: true,
+      // distDir
+      // extendViteConf (viteConf) {},
+      // viteVuePluginOptions: {},
+      // vitePlugins: [
+      //   [ 'package-name', { ..options.. } ]
+      // ]
     },
     devServer: {
-      server: {
-        type: 'http'
-      },
-      port: 8080,
+      // https: true
       open: true
     },
     framework: {
       config: {},
-      directives: ['Ripple', 'ClosePopup'],
-      plugins: ['Dialog', 'Notify']
+      lang: 'ru',
+      // components: [],
+      // directives: [],
+      plugins: []
     },
+    // animations: 'all', // --- includes all animations
     animations: [],
+    // sourceFiles: {
+    //   rootComponent: 'src/App.vue',
+    //   router: 'src/router/index',
+    //   store: 'src/store/index',
+    //   registerServiceWorker: 'src-pwa/register-service-worker',
+    //   serviceWorker: 'src-pwa/custom-service-worker',
+    //   pwaManifestFile: 'src-pwa/manifest.json',
+    //   electronMain: 'src-electron/electron-main',
+    //   electronPreload: 'src-electron/electron-preload'
+    // },
     ssr: {
+      // ssrPwaHtmlFilename: 'offline.html',
+      // extendSSRWebserverConf (esbuildConf) {},
+      // extendPackageJson (json) {},
       pwa: false,
+      // manualStoreHydration: true,
+      // manualPostHydrationTrigger: true,
       prodPort: 3000,
-      maxAge: 1000 * 60 * 60 * 24 * 30,
       middlewares: [
-        ctx.prod ? 'compression' : '',
         'render'
       ]
     },
     pwa: {
-      workboxPluginMode: 'GenerateSW',
-      workboxOptions: {},
-      manifest: {
-        name: 'Loyalty System',
-        short_name: 'Loyalty System',
-        description: '',
-        display: 'standalone',
-        orientation: 'portrait',
-        background_color: '#ffffff',
-        theme_color: '#027be3',
-        icons: [
-          {
-            src: 'icons/icon-128x128.png',
-            sizes: '128x128',
-            type: 'image/png'
-          },
-          {
-            src: 'icons/icon-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'icons/icon-256x256.png',
-            sizes: '256x256',
-            type: 'image/png'
-          },
-          {
-            src: 'icons/icon-384x384.png',
-            sizes: '384x384',
-            type: 'image/png'
-          },
-          {
-            src: 'icons/icon-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
+      workboxMode: 'generateSW',
+      injectPwaMetaTags: true,
+      swFilename: 'sw.js',
+      manifestFilename: 'manifest.json',
+      useCredentialsForManifestTag: false,
+      // useFilenameHashes: true,
+      // extendGenerateSWOptions (cfg) {}
+      // extendInjectManifestOptions (cfg) {},
+      // extendManifestJson (json) {}
+      // extendPWACustomSWConf (esbuildConf) {}
     },
-    cordova: {},
+    cordova: {
+      // noIosLegacyBuildFlag: true,
+    },
     capacitor: {
       hideSplashscreen: true
     },
     electron: {
+      // extendElectronMainConf (esbuildConf)
+      // extendElectronPreloadConf (esbuildConf)
+      inspectPort: 5858,
       bundler: 'packager',
       packager: {
+        // appBundleId: '',
+        // appCategoryType: '',
+        // osxSign: '',
+        // protocol: 'myapp://path',
+        // win32metadata: { ... }
       },
       builder: {
-        appId: 'loyalty-system'
-      },
-      chainWebpackMain (/* chain */) {
-        //
-      },
-      chainWebpackPreload (/* chain */) {
-        //
+        appId: 'portfolio'
       }
+    },
+    bex: {
+      contentScripts: [
+        'my-content-script'
+      ],
+      // extendBexScriptsConf (esbuildConf) {}
+      // extendBexManifestJson (json) {}
     }
   }
 });

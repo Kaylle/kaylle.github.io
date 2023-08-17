@@ -1,60 +1,166 @@
-@import "src/css/quasar.variables";
-.q-field__control {
-  border-radius: 16px !important;
-  backdrop-filter: blur(10px);
-  background: #ffffffaa;
+::-webkit-scrollbar {
+  width: 10px;
 }
-.q-field--outlined .q-field__control:before {
-  border: 2px solid rgba(255,255,255,0.1);
+
+::-webkit-scrollbar-track {
+  background-color: $dark-page;
 }
-.q-field--outlined .q-field__control:hover:before {
-  border-color: rgba(255,255,255,0.5);
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #1B2038;
 }
-.q-field--outlined.q-field--highlighted .q-field__control:after {
-  border-color: rgba(255,255,255,0.5);
+
+::-moz-selection {
+  background: $primary;
+  color: white;
 }
-.q-field__bottom {
-  padding: 4px 12px 4px;
+
+::selection {
+  background: $primary;
+  color: white;
 }
-h1,h2,h3,h4,h5,h6 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-.q-btn--rectangle {
-  border-radius: 16px !important;
-}
-.q-notification {
-  border-radius: 12px;
-  box-shadow: none;
-  & .q-notification__badge {
-    background: $white !important;
-    box-shadow: none !important;
-    color: $negative !important;
-    font-weight: 700 !important;
+
+.q-btn:not(.q-btn--round) {
+  border-radius: 10px;
+  font-weight: 400;
+  padding: 8px 22px;
+  &:before {
+    box-shadow: $card-shadow;
+  }
+  & i {
+    font-size: 18px !important;
+    margin-right: 8px;
   }
 }
-.q-drawer {
-  background: transparent !important;
+
+.q-btn--flat {
+  &:before {
+    box-shadow: none !important;
+  }
+}
+
+.q-btn--round {
+  &:before {
+    box-shadow: $card-shadow;
+  }
+}
+
+.q-avatar {
+  background: $avatar;
+  box-shadow: $card-shadow;
+}
+
+.q-toolbar {
+  color: white;
+  background: $bg !important;
+}
+
+.q-tabs {
+  height: 69px;
+  background: $gradient;
+  border-radius: 10px;
+  box-shadow: $card-shadow;
+  border: 1px solid rgba(255,255,255,0.1);
+  &.f {
+    background: $gradient2;
+  }
+  & .q-tab {
+    padding: 0 32px;
+  }
 }
 
 .q-card {
-  background-color: rgba(255, 255, 255, 0.55) !important;
-  border-radius: 16px !important;
-  backdrop-filter: blur(10px) !important;
-  outline: 2px solid rgba(211, 213, 218, 0.15) !important;
-  box-shadow: none !important;
-  & .q-card__section--vert {
-    padding: 30px 24px !important;
+  cursor: default;
+  transition: all 0.5s ease !important;
+  background: $gradient;
+  border-radius: 10px;
+  box-shadow: $card-shadow;
+  border: 1px solid rgba(255,255,255,0.1);
+  & .q-card__section {
+    padding: 24px;
+    & .q-img {
+      box-shadow: $card-shadow;
+    }
   }
+  & .hover {
+    cursor: pointer;
+    & .hover-inner {
+      opacity: 0;
+      transition: all .3s ease;
+    }
+  }
+  & svg {
+    transition: all 0.5s ease;
+  }
+  &:hover {
+    transition: all 0.5s ease !important;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    & svg {
+      transition: all 0.5s ease;
+      //box-shadow: 0 0 5px white;
+      //fill: #2FA9F9 !important;
+      //transform: translate(5px,5px);
+    }
+    & .hover {
+      & .hover-inner {
+        opacity: 1;
+        transition: all .3s ease;
+      }
+
+    }
+  }
+}
+.rounded-borders {
+  border-radius: 10px;
+}
+
+.text-h5, h5 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.text-h6, h6 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.q-page.bg-dark {
+  background: $bg !important;
+}
+
+.q-footer .q-toolbar {
+  background: #1B2038 !important;
+  padding: 32px;
 }
 
 .q-menu {
-  border-radius: 16px;
-  padding: 16px 10px 6px 10px;
-}
-.q-tab-panels {
-  background: transparent;
-  & .q-tab-panel {
-    padding: 0;
+  min-width: 280px;
+  background: $menu;
+  border-radius: 10px;
+  box-shadow: $card-shadow;
+  & > .q-item {
+    color: $dark;
+    min-height: 34px;
+    height: 34px;
+    font-size: 12px;
+  }
+  & .q-list {
+    & .q-item {
+      background: $dark-page;
+      font-weight: 300;
+      border-bottom: 1px solid $menu;
+      & .q-item__section--side {
+        border-radius: 100px;
+        width: 31px;
+        height: 31px;
+        padding: 0;
+        align-items: center;
+      }
+    }
   }
 }

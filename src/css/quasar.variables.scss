@@ -1,17 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-$typography-font-family : 'Montserrat', sans-serif !default;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$typography-font-family : 'Inter', sans-serif !default;
 
-$primary   : #ee4a4e;
-$secondary : #c4699b;
-$accent    : #7673bc;
+$primary   : #AB55CD;
+$secondary : #212A46;
+$accent    : #EB35DE;
 
-$dark      : #333543;
-$dark-page : #121212;
-$white     : #ffffff;
-$grey      : #f6f7f9;
-//$grey      : #E8EBF0;
+$grey      : #71778C;
+$dark      : #7582B1;
+$dark-page : #212A46;
+$white     : #FFFFFF;
+$menu      : #2D3555;
 
-$positive  : #009e84;
-$negative  : #ee4a4e;
-$info      : #3db2e7;
-$warning   : #fdd96d;
+$positive  : #48A575;
+$negative  : #D8788A;
+$info      : #2FA9F9;
+$warning   : #F2C94C;
+
+$card-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+$gradient: linear-gradient(250deg, #2B2D4B 0%, #2B2D4B0A 100%);
+$gradient2: linear-gradient(90deg, #2B2D4B0A 0%, #4E3D5B 100%);
+$bg: linear-gradient(45deg, #1B2038 0%, #252D4A 25.52%, #3C354C 49.48%, #242B48 74.48%, #1E213F 100%) fixed;
+$avatar: linear-gradient(147deg, #E07653 0%, #BC524F 22.92%, #D25689 53.44%, #BB61F7 82.14%, #3C9FCC 100%);
