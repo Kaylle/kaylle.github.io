@@ -1,0 +1,1 @@
+import{h as r,k as s,c as t}from"./index.daf7562c.js";const c=r("div",{class:"q-space"});var o=s({name:"QSpace",setup(){return()=>c}});const u={dark:{type:Boolean,default:null}};function p(a,e){return t(()=>a.dark===null?e.dark.isActive:a.dark)}export{o as Q,p as a,u};
